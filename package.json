@@ -1,0 +1,91 @@
+{
+  "name": "auto-copyright",
+  "publisher": "Nexus-CodeHub",
+  "displayName": "Auto Copyright",
+  "description": "Add Copytight",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:html",
+    "onLanguage:css",
+    "onLanguage:javascript",
+    "onLanguage:sass",
+    "onLanguage:scss",
+    "onLanguage:php",
+    "onLanguage:blade",
+    "onLanguage:typescript",
+    "onLanguage:vue",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact",
+    "onLanguage:python",
+    "onLanguage:java",
+    "onLanguage:c",
+    "onLanguage:cpp",
+    "onLanguage:markdown",
+    "onLanguage:ruby",
+    "onLanguage:go",
+    "onLanguage:shellscript",
+    "onLanguage:json",
+    "onLanguage:yaml",
+    "onLanguage:xml"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "auto-copyright.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Auto Copyright Einstellungen",
+      "properties": {
+        "autoCopyright.name": {
+          "type": "string",
+          "default": "NAME",
+          "description": "Name des Rechteinhabers für den Copyright-Hinweis."
+        },
+        "autoCopyright.year": {
+          "type": "string",
+          "default": "2025",
+          "description": "Jahr für den Copyright-Hinweis."
+        },
+        "autoCopyright.text": {
+          "type": "string",
+          "default": "All rights reserved.\nUnauthorized copying, modification, distribution, or use of this is prohibited without express written permission.",
+          "description": "Zusätzlicher Copyright-Text. Mehrzeilig möglich."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.100.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevinwurbs/auto-copyright.git"
+  },
+  "license": "MIT"
+}
