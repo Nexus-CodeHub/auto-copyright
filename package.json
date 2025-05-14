@@ -1,11 +1,11 @@
 {
   "name": "auto-copyright",
   "publisher": "Nexus-CodeHub",
-  "displayName": "Auto Copyright",
-  "description": "Add Copytight",
-  "version": "0.0.1",
+  "displayName": "Auto Copyright HEADER",
+  "description": "Add Copytight Header to your files",
+  "version": "0.0.3",
   "engines": {
-    "vscode": "^1.100.0"
+    "vscode": "^1.96.0"
   },
   "categories": [
     "Other"
